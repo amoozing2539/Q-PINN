@@ -1,0 +1,1 @@
+A quantum circuit, due to its Hilbert space dimensionality, can approximate the solutions to plasma differential equations with fewer trainable parameters (higher expressibility) than a classical neural network.
