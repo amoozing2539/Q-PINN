@@ -1,0 +1,52 @@
+# ============================
+# Simulation data & output
+# ============================
+simulation/diags/
+simulation/alfven_wave_dataset.h5
+simulation/*.h5
+simulation/*.dpkl
+simulation/Backtrace.*
+simulation/warpx_used_inputs
+
+# ============================
+# Large / binary data files
+# ============================
+*.h5
+*.hdf5
+*.opmd
+*.dpkl
+
+# ============================
+# Python
+# ============================
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.eggs/
+dist/
+build/
+.eggs/
+*.so
+
+# ============================
+# Jupyter / IPython
+# ============================
+*.ipynb
+.ipynb_checkpoints/
+
+# ============================
+# OS & editor
+# ============================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# ============================
+# Environment
+# ============================
+.env
+*.log
