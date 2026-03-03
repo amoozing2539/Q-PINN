@@ -1,0 +1,109 @@
+Host Name: BD1
+=== If no file names and line numbers are shown below, one can run
+            addr2line -Cpfie my_exefile my_line_address
+    to convert `my_line_address` (e.g., 0x4a6b) into file name and line number.
+    Or one can use amrex/Tools/Backtrace/parse_bt.py.
+
+=== Please note that the line number reported by addr2line may not be accurate.
+    One can use
+            readelf -wl my_exefile | grep my_line_address'
+    to find out the offset for that line.
+
+ 0: /home/aleja/miniconda3/envs/warpx_env/lib/python3.14/site-packages/amrex/space1d/../../../../libamrex_1d.so(_ZN5amrex11BLBackTrace20print_backtrace_infoEP8_IO_FILE+0x42) [0x7da148348142]
+    ?? ??:0
+
+ 1: /home/aleja/miniconda3/envs/warpx_env/lib/python3.14/site-packages/amrex/space1d/../../../../libamrex_1d.so(_ZN5amrex11BLBackTrace7handlerEi+0x443) [0x7da14834c803]
+    ?? ??:0
+
+ 2: /lib/x86_64-linux-gnu/libc.so.6(+0x45330) [0x7da176c45330]
+
+ 3: /home/aleja/miniconda3/envs/warpx_env/lib/python3.14/site-packages/pywarpx/warpx_pybind_1d.cpython-314-x86_64-linux-gnu.so(+0x55e613) [0x7da14755e613]
+    ?? ??:0
+
+ 4: /home/aleja/miniconda3/envs/warpx_env/lib/python3.14/site-packages/pywarpx/warpx_pybind_1d.cpython-314-x86_64-linux-gnu.so(+0x41ad60) [0x7da14741ad60]
+    ?? ??:0
+
+ 5: /home/aleja/miniconda3/envs/warpx_env/lib/python3.14/site-packages/amrex/space1d/../../../../libgomp.so.1(GOMP_parallel+0x46) [0x7da1498d0a66]
+    ?? ??:0
+
+ 6: /home/aleja/miniconda3/envs/warpx_env/lib/python3.14/site-packages/pywarpx/warpx_pybind_1d.cpython-314-x86_64-linux-gnu.so(+0x411f91) [0x7da147411f91]
+    ?? ??:0
+
+ 7: /home/aleja/miniconda3/envs/warpx_env/lib/python3.14/site-packages/pywarpx/warpx_pybind_1d.cpython-314-x86_64-linux-gnu.so(_ZNK14HybridPICModel15HybridPICSolveEERKSt5arrayIPN5amrex8MultiFabELm3EES6_S6_RKS2_RS0_ISt10unique_ptrINS1_9iMultiFabESt14default_deleteISA_EELm3EEiN7ablastr5utils5enums9PatchTypeEb+0x14b) [0x7da14719919b]
+    ?? ??:0
+
+ 8: /home/aleja/miniconda3/envs/warpx_env/lib/python3.14/site-packages/pywarpx/warpx_pybind_1d.cpython-314-x86_64-linux-gnu.so(_ZNK14HybridPICModel15HybridPICSolveEERKSt5arrayIPN5amrex8MultiFabELm3EES6_S6_RKS2_RS0_ISt10unique_ptrINS1_9iMultiFabESt14default_deleteISA_EELm3EEib+0x8a) [0x7da1471992aa]
+    ?? ??:0
+
+ 9: /home/aleja/miniconda3/envs/warpx_env/lib/python3.14/site-packages/pywarpx/warpx_pybind_1d.cpython-314-x86_64-linux-gnu.so(_ZNK14HybridPICModel15HybridPICSolveEERKN5amrex6VectorISt5arrayIPNS0_8MultiFabELm3EESaIS5_EEES9_S9_RKNS1_IS4_SaIS4_EEERNS1_IS2_ISt10unique_ptrINS0_9iMultiFabESt14default_deleteISF_EELm3EESaISJ_EEEb+0x99) [0x7da147199479]
+    ?? ??:0
+
+10: /home/aleja/miniconda3/envs/warpx_env/lib/python3.14/site-packages/pywarpx/warpx_pybind_1d.cpython-314-x86_64-linux-gnu.so(_ZN14HybridPICModel9FieldPushERKN5amrex6VectorISt5arrayIPNS0_8MultiFabELm3EESaIS5_EEES9_S9_RKNS1_IS4_SaIS4_EEERNS1_IS2_ISt10unique_ptrINS0_9iMultiFabESt14default_deleteISF_EELm3EESaISJ_EEEd14SubcyclingHalfNS0_9IntVectNDILi1EEESt8optionalIbE+0x8e) [0x7da14719975e]
+    ?? ??:0
+
+11: /home/aleja/miniconda3/envs/warpx_env/lib/python3.14/site-packages/pywarpx/warpx_pybind_1d.cpython-314-x86_64-linux-gnu.so(_ZN14HybridPICModel14BfieldEvolveRKERKN5amrex6VectorISt5arrayIPNS0_8MultiFabELm3EESaIS5_EEES9_S9_RKNS1_IS4_SaIS4_EEERNS1_IS2_ISt10unique_ptrINS0_9iMultiFabESt14default_deleteISF_EELm3EESaISJ_EEEdi14SubcyclingHalfNS0_9IntVectNDILi1EEESt8optionalIbE+0x59a) [0x7da147199d4a]
+    ?? ??:0
+
+12: /home/aleja/miniconda3/envs/warpx_env/lib/python3.14/site-packages/pywarpx/warpx_pybind_1d.cpython-314-x86_64-linux-gnu.so(_ZN14HybridPICModel14BfieldEvolveRKERKN5amrex6VectorISt5arrayIPNS0_8MultiFabELm3EESaIS5_EEES9_S9_RKNS1_IS4_SaIS4_EEERNS1_IS2_ISt10unique_ptrINS0_9iMultiFabESt14default_deleteISF_EELm3EESaISJ_EEEd14SubcyclingHalfNS0_9IntVectNDILi1EEESt8optionalIbE+0x99) [0x7da14719a219]
+    ?? ??:0
+
+13: /home/aleja/miniconda3/envs/warpx_env/lib/python3.14/site-packages/pywarpx/warpx_pybind_1d.cpython-314-x86_64-linux-gnu.so(_ZN5WarpX21HybridPICEvolveFieldsEv+0x9c2) [0x7da14716e242]
+    ?? ??:0
+
+14: /home/aleja/miniconda3/envs/warpx_env/lib/python3.14/site-packages/pywarpx/warpx_pybind_1d.cpython-314-x86_64-linux-gnu.so(_ZN5WarpX6EvolveEi+0x196e) [0x7da14715cf2e]
+    ?? ??:0
+
+15: /home/aleja/miniconda3/envs/warpx_env/lib/python3.14/site-packages/pywarpx/warpx_pybind_1d.cpython-314-x86_64-linux-gnu.so(+0x108231) [0x7da147108231]
+    ?? ??:0
+
+16: /home/aleja/miniconda3/envs/warpx_env/lib/python3.14/site-packages/pywarpx/warpx_pybind_1d.cpython-314-x86_64-linux-gnu.so(+0xe82eb) [0x7da1470e82eb]
+    ?? ??:0
+
+17: python(+0x209cab) [0x63c94f7d7cab]
+    ?? ??:0
+
+18: python(_PyObject_MakeTpCall+0x434) [0x63c94f7a11a4]
+    ?? ??:0
+
+19: python(_PyEval_EvalFrameDefault+0xcf3) [0x63c94f7b8453]
+    ?? ??:0
+
+20: python(+0x1e6008) [0x63c94f7b4008]
+    ?? ??:0
+
+21: python(PyEval_EvalCode+0xb5) [0x63c94f88dd35]
+    ?? ??:0
+
+22: python(+0x30062d) [0x63c94f8ce62d]
+    ?? ??:0
+
+23: python(+0x2ff238) [0x63c94f8cd238]
+    ?? ??:0
+
+24: python(+0x2fef7f) [0x63c94f8ccf7f]
+    ?? ??:0
+
+25: python(+0x2fec3d) [0x63c94f8ccc3d]
+    ?? ??:0
+
+26: python(Py_RunMain+0x461) [0x63c94f8828a1]
+    ?? ??:0
+
+27: python(Py_BytesMain+0x37) [0x63c94f87c8c7]
+    ?? ??:0
+
+28: /lib/x86_64-linux-gnu/libc.so.6(+0x2a1ca) [0x7da176c2a1ca]
+
+29: /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x8b) [0x7da176c2a28b]
+
+30: python(+0x2adc9a) [0x63c94f87bc9a]
+    ?? ??:0
+
+
+===== TinyProfilers ======
+REG::WarpX::Evolve()
+WarpX::Evolve()
+WarpX::Evolve::step
+WarpX::HybridPICEvolveFields()
+WarpX::HybridPICSolveE()
+
